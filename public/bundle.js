@@ -8293,7 +8293,7 @@
 	      var placeForBags = document.querySelector('.place-for-bags');
 	      var scalesPlatforms = document.querySelectorAll('.bags-on-scale');
 
-	      // this._removeOldSutcases();
+	      this._removeOldSutcases();
 
 	      // new BottomDropTarget(placeForBags);
 

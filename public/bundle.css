@@ -93,8 +93,6 @@ html, body {
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
      /* IE10+ CSS styles go here */
      .bags-on-scale {
-       -ms-flex-line-pack: end;
-           align-content: flex-end;
        -ms-flex-align: end;
            align-items: flex-end;
 

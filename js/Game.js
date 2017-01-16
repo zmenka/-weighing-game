@@ -32,7 +32,7 @@ export default class Game {
     const placeForBags = document.querySelector('.place-for-bags');
     const scalesPlatforms = document.querySelectorAll('.bags-on-scale');
 
-    // this._removeOldSutcases();
+    this._removeOldSutcases();
 
     // new BottomDropTarget(placeForBags);
 
