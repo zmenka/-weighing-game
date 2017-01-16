@@ -1,5 +1,5 @@
 {
-  "name": "game-bags-on-thescales",
+  "name": "weighing-game",
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
@@ -15,7 +15,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "browserslist": [
-    "last 10 versions"
+    "last 2 versions"
   ],
   "scripts": {
     "build": "webpack",

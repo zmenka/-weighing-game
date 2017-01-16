@@ -32,7 +32,7 @@ export default class Game {
     const placeForBags = document.querySelector('.place-for-bags');
     const scalesPlatforms = document.querySelectorAll('.bags-on-scale');
 
-    this._removeOldSutcases();
+    // this._removeOldSutcases();
 
     // new BottomDropTarget(placeForBags);
 
@@ -107,7 +107,7 @@ export default class Game {
 
   getOnDragEndCb() {
     return (elem) => {
-      var event = new CustomEvent('smth-is-dropped', {
+      const event = new CustomEvent('smth-is-dropped', {
         bubbles: true
       });
       elem && elem.dispatchEvent(event);

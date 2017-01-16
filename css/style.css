@@ -76,9 +76,22 @@ html, body {
   position: absolute;
   width: 385px;
   height: 255px;
+  bottom:45px;
   display: flex;
+
   flex-wrap: wrap-reverse;
   align-content: flex-start;
+  align-items: flex-start;
+
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+     .bags-on-scale {
+       align-content: flex-end;
+       align-items: flex-end;
+
+     }
 }
 
 .bags-on-scale.hover{
@@ -101,9 +114,11 @@ html, body {
   width: 64px;
   height: 64px;
   flex-shrink: 0;
-
+  flex-grow: 0;
+  /*
   overflow: hidden;
-    resize: none;
+  resize: none;
+  */
 }
 
 .sutcase-1 {

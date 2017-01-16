@@ -15,7 +15,7 @@ export function getCoords(elem) {
 
   return {
     top: Math.round(top),
-    left: Math.round(left)
+    left: Math.round(left),
   };
 }
 
