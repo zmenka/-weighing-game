@@ -1,0 +1,256 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.word {
+  min-height: 100%;
+  background: #ece3dc;
+}
+
+.scales {
+  position: relative;
+  background-image: url(../img/scale.png);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 1000px 200px;
+  width: 1000px;
+  height: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arrow {
+  position:absolute;
+  background-image: url(../img/arrow.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 42px;
+  left: 487px;
+  bottom: 161px;
+
+  transform-origin: center bottom;
+  transition-duration: 2s;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+.more-on-left .arrow {
+  transform: rotate(-30deg);
+}
+.more-on-right .arrow {
+  transform: rotate(30deg);
+}
+
+.platform {
+  position:absolute;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 385px;
+  height: 300px;
+  bottom: 155px;
+
+  transition-duration: 2s;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+
+.platform-left {
+  background-image: url(../img/left-scale.png);
+  left: 70px;
+}
+
+.platform-right {
+  background-image: url(../img/right-scale.png);
+  right: 85px;
+}
+.more-on-left .platform-left,
+.more-on-right .platform-right {
+  transform: translate(0, 20px);
+}
+
+.bags-on-scale {
+  position: absolute;
+  width: 385px;
+  height: 255px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-content: flex-start;
+}
+
+.bags-on-scale.hover{
+  box-shadow: 0 10px 5px -5px #ff8a3b;
+}
+
+.place-for-bags {
+  display: flex;
+  justify-content: center;
+  min-width: 1000px;
+}
+
+.place-for-bags.hover{
+  box-shadow: 0 7px 5px -5px #534b4b;
+}
+
+.sutcase {
+  background-image: url(../img/spritelaggage.png);
+  background-position: 0 0;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+
+  overflow: hidden;
+    resize: none;
+}
+
+.sutcase-1 {
+  background-position: 0 0;
+  /*left: 0;*/
+}
+.sutcase-2 {
+  background-position: 64px 0;
+  /*left: 64px;*/
+}
+.sutcase-3 {
+  background-position: 128px 0;
+  /*left: 128px;*/
+}
+.sutcase-4 {
+  background-position: 192px 0;
+  /*left: 192px;*/
+}
+.sutcase-5 {
+  background-position: 256px 0;
+  /*left: 256px;*/
+}
+.sutcase-6 {
+  background-position: 320px 0;
+  /*left: 320px;*/
+}
+.sutcase-7 {
+  background-position: 384px 0;
+  /*left: 384px;*/
+}
+.sutcase-8 {
+  background-position: 448px 0;
+  /*left: 448px;*/
+}
+.sutcase-9 {
+  background-position: 512px 0;
+  /*left: 512px;*/
+}
+.sutcase-10 {
+  background-position: 576px 0;
+  /*left: 576px;*/
+}
+.sutcase-11 {
+  background-position: 640px 0;
+  /*left: 640px;*/
+}
+.sutcase-12 {
+  background-position: 704px 0;
+  /*left: 704px;*/
+}
+
+.transition {
+  transition-duration: 2s;
+  transition-property: top, left;
+  transition-timing-function: ease-in-out;
+}
+
+.invisible {
+  /*width: 0;*/
+  opacity: 0;
+}
+
+.reset {
+  color: #ffffff;
+  background: #534b4b;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 0;
+  width: 130px;
+  margin: 10px auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.reset:hover {
+  background-color: #707070;
+}
+.winner-msg {
+  position: absolute;
+  top: 250px;
+  margin:0 auto;
+  left: 0;
+  right: 0;
+  width: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 20px;
+  color: #ef5da7;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.winner-start {
+  animation-duration: 5s;
+  animation-name:  winner-start;
+}
+
+@keyframes winner-start {
+  50% {
+    opacity: 1;
+    transform: scale(2);
+  }
+}
+
+.add-flex {
+  animation-duration: 0.5s;
+  animation-name:  add-flex;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode:  forwards;
+}
+
+.remove-flex {
+  animation-duration: 0.1s;
+  animation-name:  remove-flex;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode:  forwards;
+}
+
+@keyframes add-flex {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 64px;
+  }
+}
+
+@keyframes remove-flex {
+  from {
+    opacity: 0.99;
+    width: 64px;
+  }
+  to {
+    opacity: 0.01;
+    width: 0;
+  }
+}

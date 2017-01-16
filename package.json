@@ -1,0 +1,24 @@
+{
+  "name": "game-bags-on-thescales",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "postcss-loader": "^1.2.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --hot --inline"
+  }
+}
