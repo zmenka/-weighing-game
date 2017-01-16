@@ -32,29 +32,16 @@ html, body {
   left: 487px;
   bottom: 161px;
 
-  -webkit-transform-origin: center bottom;
-
-      -ms-transform-origin: center bottom;
-
-          transform-origin: center bottom;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
+  transform-origin: center bottom;
+  transition-duration: 2s;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .more-on-left .arrow {
-  -webkit-transform: rotate(-30deg);
-      -ms-transform: rotate(-30deg);
-          transform: rotate(-30deg);
+  transform: rotate(-30deg);
 }
 .more-on-right .arrow {
-  -webkit-transform: rotate(30deg);
-      -ms-transform: rotate(30deg);
-          transform: rotate(30deg);
+  transform: rotate(30deg);
 }
 
 .platform {
@@ -66,15 +53,9 @@ html, body {
   height: 300px;
   bottom: 155px;
 
-  -webkit-transition-duration: 2s;
-
-          transition-duration: 2s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
+  transition-duration: 2s;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .platform-left {
@@ -88,47 +69,52 @@ html, body {
 }
 .more-on-left .platform-left,
 .more-on-right .platform-right {
-  -webkit-transform: translate(0, 20px);
-      -ms-transform: translate(0, 20px);
-          transform: translate(0, 20px);
+  transform: translate(0, 20px);
 }
 
 .bags-on-scale {
   position: absolute;
   width: 385px;
   height: 255px;
-  display: -webkit-box;
-  display: -webkit-flex;
+  bottom:45px;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap-reverse;
-      -ms-flex-wrap: wrap-reverse;
-          flex-wrap: wrap-reverse;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
+
+  -ms-flex-wrap: wrap-reverse;
+
+      flex-wrap: wrap-reverse;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+     .bags-on-scale {
+       -ms-flex-line-pack: end;
+           align-content: flex-end;
+       -ms-flex-align: end;
+           align-items: flex-end;
+
+     }
 }
 
 .bags-on-scale.hover{
-  -webkit-box-shadow: 0 10px 5px -5px #ff8a3b;
-          box-shadow: 0 10px 5px -5px #ff8a3b;
+  box-shadow: 0 10px 5px -5px #ff8a3b;
 }
 
 .place-for-bags {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   min-width: 1000px;
 }
 
 .place-for-bags.hover{
-  -webkit-box-shadow: 0 7px 5px -5px #534b4b;
-          box-shadow: 0 7px 5px -5px #534b4b;
+  box-shadow: 0 7px 5px -5px #534b4b;
 }
 
 .sutcase {
@@ -136,12 +122,14 @@ html, body {
   background-position: 0 0;
   width: 64px;
   height: 64px;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  /*
   overflow: hidden;
-    resize: none;
+  resize: none;
+  */
 }
 
 .sutcase-1 {
@@ -194,12 +182,9 @@ html, body {
 }
 
 .transition {
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-  -webkit-transition-property: top, left;
+  transition-duration: 2s;
   transition-property: top, left;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .invisible {
@@ -243,69 +228,35 @@ html, body {
   font-size: 20px;
   color: #ef5da7;
   opacity: 0;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
 }
 
 .winner-start {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-name:  winner-start;
-          animation-name:  winner-start;
-}
-
-@-webkit-keyframes winner-start {
-  50% {
-    opacity: 1;
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
+  animation-duration: 5s;
+  animation-name:  winner-start;
 }
 
 @keyframes winner-start {
   50% {
     opacity: 1;
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    transform: scale(2);
   }
 }
 
 .add-flex {
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-name:  add-flex;
-          animation-name:  add-flex;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode:  forwards;
-          animation-fill-mode:  forwards;
+  animation-duration: 0.5s;
+  animation-name:  add-flex;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode:  forwards;
 }
 
 .remove-flex {
-  -webkit-animation-duration: 0.1s;
-          animation-duration: 0.1s;
-  -webkit-animation-name:  remove-flex;
-          animation-name:  remove-flex;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode:  forwards;
-          animation-fill-mode:  forwards;
-}
-
-@-webkit-keyframes add-flex {
-  from {
-    opacity: 0;
-    width: 0;
-  }
-  to {
-    opacity: 1;
-    width: 64px;
-  }
+  animation-duration: 0.1s;
+  animation-name:  remove-flex;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode:  forwards;
 }
 
 @keyframes add-flex {
@@ -316,17 +267,6 @@ html, body {
   to {
     opacity: 1;
     width: 64px;
-  }
-}
-
-@-webkit-keyframes remove-flex {
-  from {
-    opacity: 0.99;
-    width: 64px;
-  }
-  to {
-    opacity: 0.01;
-    width: 0;
   }
 }
 
